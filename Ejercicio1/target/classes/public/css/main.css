@@ -1,0 +1,19 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=number], input[type=text] {
+    width: 50%;
+    padding: 7px 14px;
+    margin: 8px 20px 8px 0;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: #f5f5cd;
+    border: none;
+    border-radius: 7px;
+    color: #333;
+    padding: 14px 14px;
+    margin: 4px 2px;
+}

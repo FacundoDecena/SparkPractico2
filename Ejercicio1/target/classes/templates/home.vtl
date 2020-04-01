@@ -1,0 +1,39 @@
+<form action="/api/sort" method="get">
+    <label for="n0">Numero 0</label>
+    <input id="n0" name="n0" type="number" value="$n0">
+    <br>
+    <label for="n1">Numero 1</label>
+    <input id="n1" name="n1" type="number" value="$n1">
+    <br>
+    <label for="n2">Numero 2</label>
+    <input id="n2" name="n2" type="number" value="$n2">
+    <br>
+    <label for="n3">Numero 3</label>
+    <input id="n3" name="n3" type="number" value="$n3">
+    <br>
+    <label for="n4">Numero 4</label>
+    <input id="n4" name="n4" type="number" value="$n4">
+    <br>
+    <label for="n5">Numero 5</label>
+    <input id="n5" name="n5" type="number" value="$n5"><br>
+    <button type="submit" value="true" name="sort" class="btn">Ordenar</button>
+    <button type="submit" value="false" name="sort" class="btn">Desordenar</button>
+</form>
+<p>
+    Lista de numeros #if($sort) Ordenada #else Desordenada #end:<br>
+    #set( $n = 0)
+    #foreach ($numero in $ListaDeNumeros)
+        $numero
+        #set( $n = $n+1)
+        #if ($n % 2 == 0)
+            <br>
+        #end
+    #end
+</p>
+<p>
+    #set( $len = ${ListaDeNumeros.size()}/2)
+    #if($len)
+        Cantidad de numeros: $len
+    #end
+</p>
+
