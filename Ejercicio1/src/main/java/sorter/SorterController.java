@@ -14,7 +14,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 
 public class SorterController {
     static public Route home = (Request request, Response response) ->{
-        HashMap model = new HashMap();
+        HashMap<String, Object> model = new HashMap<String, Object>();
         model.put("template", "templates/home.vtl");
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout.vtl"));
     };
