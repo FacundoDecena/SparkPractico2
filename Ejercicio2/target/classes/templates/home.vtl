@@ -1,0 +1,16 @@
+<div>
+    <form action="/api" method="get">
+        <label>Peso</label>
+        <input id="peso" name="peso" type="number" step="0.01" min=0/>
+        <label>Altura en metros</label>
+        <input id="altura" name="altura" type="number" step="0.01" min=0 max=2.5/>
+        <input type="submit" value="calcular">
+    </form>
+</div>
+
+<p>Usted tiene <span>$message</span></p>
+<p>Y su indice de masa corporal es
+<span>
+    #set($String = "abc")
+    $String.format("%.2f", $imc)
+</span></p>
