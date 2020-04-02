@@ -1,0 +1,18 @@
+<form action="/api" method="get">
+    <label for="cantidad">Cantidad a convertir</label><br>
+    <input id="cantidad" name="cantidad" type="number" value="$cantidad" step="0.01"/><br>
+
+    <input type="submit" formaction="/api/celcius" value="Convertir a Celcius">
+    <input type="submit" formaction="/api/fahrenheit" value="Convertir a Fahrenheit">
+    <input type="submit" formaction="/api/kilogramo" value="Convertir a Kilogramo">
+    <input type="submit" formaction="/api/libra" value="Convertir a Libra">
+    <input type="submit" formaction="/api/kilometros" value="Convertir a Kilometros">
+    <input type="submit" formaction="/api/millas" value="Convertir a Millas">
+</form>
+
+#set($String = "abc")
+    
+#if ($resultado)
+    <div>Resultado: $String.format("%.2f", $resultado) $unidad</div>
+#end
+
