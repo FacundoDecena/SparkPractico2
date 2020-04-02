@@ -1,0 +1,27 @@
+<form action="/api" method="get">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" name="nombre" type="text" value="$nombre"/><br>
+    <input type="submit" value="Todos" name="opt">
+    <input type="submit" formaction="/api/hijos" value="Hijos" name="opt">
+    <input type="submit" formaction="/api/hermanos" value="Hermanos" name="opt">
+    <input type="submit" formaction="/api/nietos" value="Nietos" name="opt">
+    <input type="submit" formaction="/api/padres" value="Padres" name="opt">
+    <input type="submit" formaction="/api/sobrinos" value="Sobrinos" name="opt">
+    <input type="submit" formaction="/api/tios" value="Tios" name="opt">
+</form>
+
+#if ($nombre && $nombre.length() > 0)
+    $opt de $nombre:
+#elseif ($opt.equals("Todos"))
+    Todas las personas: 
+#end
+
+#if ($personas)
+    #if($personas.size() > 0)
+        #foreach ($persona in $personas)
+            $persona, 
+        #end
+    #else
+        No tiene
+    #end
+#end
