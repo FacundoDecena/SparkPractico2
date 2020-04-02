@@ -1,0 +1,19 @@
+<form action="/api" method="get">
+    <label for="a">Primer número</label><br>
+    <input id="a" name="a" type="number" value="$a" step="0.01"/><br>
+
+    <label for="b">Segundo número</label><br>
+    <input id="b" name="b" type="number" value="$b" step="0.01"/><br>
+    
+    <input type="submit" formaction="/api/suma" value="Sumar">
+    <input type="submit" formaction="/api/resta" value="Restar">
+    <input type="submit" formaction="/api/multiplicar" value="Multiplicar">
+    <input type="submit" formaction="/api/dividir" value="Dividir">
+</form>
+
+#set($String = "abc")
+    
+#if ($resultado)
+    <div>Resultado: $String.format("%.2f", $resultado) </div>
+#end
+
