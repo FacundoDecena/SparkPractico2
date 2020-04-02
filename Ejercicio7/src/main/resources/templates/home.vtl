@@ -1,0 +1,27 @@
+<form action="/api" method="get">
+    <label for="puntos">Cantidad de Puntos</label><br>
+    <input id="puntos" name="puntos" type="number" value="$puntos" step="1" min="0"/><br>
+
+    <input type="submit" formaction="/api/canjearPuntos" value="Ver disponibles">
+</form>
+
+#if($puntos)
+    <div>Puntos disponibles $puntos</div>
+#end
+<table>
+    <tr>
+    <th>Producto</th><th>Puntos</th>
+    </tr>
+#foreach($producto in $productos)
+    <tr class="tra">
+    <td class="available">$producto.getNombre()</td><td class="available"> $producto.getValor()</td>
+    </tr>
+#end
+#foreach($caro in $caros)
+    <tr class="tra">
+    <td class="not-available">$caro.getNombre()</td><td class="not-available"> $caro.getValor()</td>
+    </tr>
+#end
+</table>
+$!Error
+
