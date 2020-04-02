@@ -1,0 +1,16 @@
+<form action="/api" method="get">
+    <label for="radio">Radio</label>
+    <input id="radio" name="radio" type="number" value="$radio" step="0.01" class="center"/><br>
+    <input type="submit" value="Area y Perimetro">
+    <input type="submit" formaction="/api/area" value="Area">
+    <input type="submit" formaction="/api/perimetro" value="Perimetro">
+</form>
+
+#set($String = "abc")
+    
+#if ($area)
+    <div>Area: $String.format("%.2f", $area) </div>
+#end
+#if ($perimetro)
+    <div>Perimetro: $String.format("%.2f", $perimetro)</div>
+#end
