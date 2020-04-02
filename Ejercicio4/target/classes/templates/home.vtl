@@ -1,6 +1,6 @@
 <form action="/api" method="get">
     <label for="radio">Radio</label>
-    <input id="radio" name="radio" type="number" value="$radio" step="0.01" class="center"/><br>
+    <input id="radio" name="radio" type="number" value="$radio" step="0.01" class="center" min="0.01"/><br>
     <input type="submit" value="Area y Perimetro">
     <input type="submit" formaction="/api/area" value="Area">
     <input type="submit" formaction="/api/perimetro" value="Perimetro">
@@ -9,8 +9,8 @@
 #set($String = "abc")
     
 #if ($area)
-    <div>Area: $String.format("%.2f", $area) </div>
+    <div>Area: $String.format("%.3f", $area) </div>
 #end
 #if ($perimetro)
-    <div>Perimetro: $String.format("%.2f", $perimetro)</div>
+    <div>Perimetro: $String.format("%.3f", $perimetro)</div>
 #end
